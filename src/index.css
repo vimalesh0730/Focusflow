@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource-variable/jetbrains-mono";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --    --font-heading: 'Space Grotesk Variable', 'Inter Variable', sans-serif;
+    --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+    --font-sans: 'Inter Variable', sans-serif;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    color-scheme: dark;
+    --background: #08080b;
+    --foreground: #f4f4f5;
+    --card: #111115;
+    --card-foreground: #f4f4f5;
+    --popover: #111115;
+    --popover-foreground: #f4f4f5;
+    --primary: #8b5cf6;
+    --primary-foreground: #ffffff;
+    --secondary: #1b1b21;
+    --secondary-foreground: #f4f4f5;
+    --muted: #1b1b21;
+    --muted-foreground: #a1a1aa;
+    --accent: #1f1f27;
+    --accent-foreground: #f4f4f5;
+    --destructive: #ef4444;
+    --border: #26262e;
+    --input: #2a2a33;
+    --ring: #8b5cf6;
+    --chart-1: #8b5cf6;
+    --chart-2: #6366f1;
+    --chart-3: #a78bfa;
+    --chart-4: #c4b5fd;
+    --chart-5: #4c1d95;
+    --radius: 0.75rem;
+    --sidebar: #0c0c10;
+    --sidebar-foreground: #f4f4f5;
+    --sidebar-primary: #8b5cf6;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #1f1f27;
+    --sidebar-accent-foreground: #f4f4f5;
+    --sidebar-border: #26262e;
+    --sidebar-ring: #8b5cf6;
+}
+@layer base {
+    h1, h2, h3, h4 {
+    font-family: 'Space Grotesk Variable', 'Inter Variable', sans-serif;
+    letter-spacing: -0.02em;
+  }
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+       
+  
+  }
+
+
+@theme {
+    --color-slate-50: #08080b;
+    --color-slate-100: #1b1b21;
+    --color-slate-400: #71717a;
+    --color-slate-500: #a1a1aa;
+    --color-slate-600: #b4b4bd;
+    --color-slate-700: #d4d4d8;
+    --color-indigo-50: #1a1630;
+    --color-indigo-200: #4c1d95;
+    --color-indigo-600: #7c3aed;
+    --color-indigo-700: #c4b5fd;
+    --color-indigo-900: #ddd6fe;
+    --color-red-50: #2a1216;
+    --color-red-100: #3b1519;
+    --color-red-600: #f87171;
+    --color-red-700: #fca5a5;
+    --color-amber-100: #3a2a0a;
+    --color-amber-300: #78350f;
+    --color-amber-700: #fcd34d;
+    --color-green-700: #4ade80;
+}
+
+.recharts-text, .recharts-legend-item-text { fill: #a1a1aa !important; color: #a1a1aa !important; }
+.recharts-cartesian-grid line { stroke: #26262e; }
+.recharts-default-tooltip { background: #111115 !important; border: 1px solid #26262e !important; }
+.recharts-tooltip-label, .recharts-tooltip-item { color: #f4f4f5 !important; }
