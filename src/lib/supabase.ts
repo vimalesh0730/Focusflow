@@ -1,12 +1,16 @@
 import { createClient } from "@supabase/supabase-js";
 
-const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
-const key = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
+const clean = (v?: string) => (v ?? "").trim().replace(/^["']+|["']+$/g, "");
 
-export const isConfigured = Boolean(url && key);
+const url = clean(import.meta.env.VITE_SUPABASE_URL)
+  .replace(/\/rest\/v1\/?$/, "")
+  .replace(/\/+$/, "");
+const key = clean(import.meta.env.VITE_SUPABASE_ANON_KEY);
 
-// Only the public anon key is used. Never put the service_role key in frontend code.
+export const isConfigured = /^https?:\/\/[^\s]+$/i.test(url) && key.length > 0;
+
+// Only the public anon/publishable key is used. Never put a secret or service_role key in frontend code.
 export const supabase = createClient(
-  url || "https://placeholder.supabase.co",
-  key || "placeholder-key"
+  isConfigured ? url : "https://placeholder.supabase.co",
+  isConfigured ? key : "placeholder-key"
 );
