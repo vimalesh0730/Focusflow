@@ -1,75 +1,100 @@
-# React + TypeScript + Vite
+🕸️ FocusFlow – Intelligent Study Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A study planner that turns deadlines, subjects and your available hours into a daily plan, with a built-in focus clock.
 
-Currently, two official plugins are available:
+**Live demo:** (https://focusflow-red-psi.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- Dashboard with streak, today's plan and weekly progress
+- Subjects and tasks with full create, edit, delete and complete
+- Smart Schedule built around your daily study hours, with manual rescheduling
+- Focus Clock (Pomodoro) that logs study time to your account
+- Smart Calendar with a workload tint for overloaded days
+- Analytics charts for completion, study hours and weekly output
+  
 
-## React Compiler
+## Priority score
+Priority = 0.5 × urgency + 0.3 × importance + 0.2 × difficulty (each scaled 1–10).
+This is a transparent rule-based heuristic, not AI or machine learning.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+🧰 Tech stack
+ | Tool | Role |
+|---|---|
+| *React 19* | User interface and reusable components |
+| *TypeScript* | Type-safe application code |
+| *Vite* | Development server and build tooling |
+| *Tailwind CSS 4* | Responsive interface styling |
+| *Supabase JS* | Client library for Supabase integration |
+| *React Router* | Application navigation |
+| *Recharts* | Charts and data visualisation |
+| *Lucide React* | Interface icons |
+| *React Hook Form + Zod* | Form handling and validation |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+📁 Project structure
+The repository currently follows a Vite + React + TypeScript application
+layout:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Focusflow/
+│
+├── public/            # Static files and public assets
+├── src/                 # Application source code
+├── index.html           # Application entry HTML
+├── package.json         # Dependencies and scripts
+├── vite.config.ts       # Vite configuration
+├── tsconfig.json        # TypeScript configuration
+├── eslint.config.js     # ESLint configuration
+└── vercel.json          # Vercel deployment configuration
 
-```
+🚀 Run locally
+Prerequisites
+- Node.js (a current LTS release is
+  recommended)
+- npm
+- Git
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Run locally
+1. `npm install`
+2. Create `.env.local` with `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`
+3. Run `supabase/schema.sql` (and the `focus_logs` table) in the Supabase SQL editor
+4. `npm run dev`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. <div>Clone the repository</div>
+ </> BASH
+ 1. Clone the repository
+git clone https://github.com/vimalesh0730/Focusflow.git
+cd Focusflow
+2. Install dependencies
+npm install
+3. Start the development server
+npm run dev
+4. Build and preview
+npm run build
+npm run preview
 
-```
+
+✦ Contributing
+Good ideas make projects better. If you'd like to contribute:
+1. Fork the repository.
+2. Create a feature branch:
+   git checkout -b feature/your-feature
+3. Make your changes and test them.
+4. Commit with a clear message:
+   git commit -m "Add: describe your change"
+5. Push your branch:
+   git push origin feature/your-feature
+6. Open a Pull Request explaining what changed and why.
+For larger changes, open an issue first to discuss the idea.
+
+
+✦ The person behind the project
+<div align="center">Vimalesh V
+ -- Student developer · Exploring AI, software engineering, and product building.--
+
+  Built with curiosity. Shaped through iteration.
+
+If FocusFlow resonates with you, consider giving the repository a ⭐.
+</div>
