@@ -4,7 +4,7 @@ A study planner that turns deadlines, subjects and your available hours into a d
 
 **Live demo:** (https://focusflow-red-psi.vercel.app/)
 
-## Features
+## <i>Features</i>
 - Dashboard with streak, today's plan and weekly progress
 - Subjects and tasks with full create, edit, delete and complete
 - Smart Schedule built around your daily study hours, with manual rescheduling
@@ -13,12 +13,12 @@ A study planner that turns deadlines, subjects and your available hours into a d
 - Analytics charts for completion, study hours and weekly output
   
 
-## Priority score
+## <i>Priority score</i>
 Priority = 0.5 × urgency + 0.3 × importance + 0.2 × difficulty (each scaled 1–10).
 This is a transparent rule-based heuristic, not AI or machine learning.
 
 
-🧰 Tech stack
+🧰 <i>Tech stack</i>
  | Tool | Role |
 |---|---|
 | *React 19* | User interface and reusable components |
@@ -33,7 +33,7 @@ This is a transparent rule-based heuristic, not AI or machine learning.
 
 
 
-📁 Project structure
+📁 <i>Project structure</i>
 The repository currently follows a Vite + React + TypeScript application
 layout:
 
@@ -48,35 +48,16 @@ Focusflow/
 ├── eslint.config.js     # ESLint configuration
 └── vercel.json          # Vercel deployment configuration
 
-🚀 Run locally
-Prerequisites
-- Node.js (a current LTS release is
-  recommended)
-- npm
-- Git
-
-
-## Run locally
+🚀 <i>Run locally</i>
+Prerequisites.
 1. `npm install`
 2. Create `.env.local` with `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`
 3. Run `supabase/schema.sql` (and the `focus_logs` table) in the Supabase SQL editor
 4. `npm run dev`
 
-1. <div>Clone the repository</div>
- </> BASH
- 1. Clone the repository
-git clone https://github.com/vimalesh0730/Focusflow.git
-cd Focusflow
-2. Install dependencies
-npm install
-3. Start the development server
-npm run dev
-4. Build and preview
-npm run build
-npm run preview
 
 
-✦ Contributing
+✦ <i>Contributing</i>
 Good ideas make projects better. If you'd like to contribute:
 1. Fork the repository.
 2. Create a feature branch:
@@ -90,7 +71,8 @@ Good ideas make projects better. If you'd like to contribute:
 For larger changes, open an issue first to discuss the idea.
 
 
-✦ The person behind the project
+✦ <i>The person behind the project</i>
+
 <div align="center">Vimalesh V
  -- Student developer · Exploring AI, software engineering, and product building.--
 
